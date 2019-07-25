@@ -4,8 +4,6 @@
     "module": "commonjs",
     "lib": ["es2016", "es2017.object", "es2017.string"],
     "declaration": true,
-    "main": "lib/s3bucket-with-cloudfront.js",
-    "types": "lib/s3bucket-with-cloudfront.d.ts",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,

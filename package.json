@@ -5,6 +5,8 @@
     "build": "tsc",
     "watch": "tsc -w"
   },
+  "main": "lib/s3bucket-with-cloudfront.js",
+  "types": "lib/s3bucket-with-cloudfront.d.ts",
   "devDependencies": {
     "@types/node": "8.10.45",
     "typescript": "^3.3.3333",
