@@ -4,6 +4,8 @@
     "module": "commonjs",
     "lib": ["es2016", "es2017.object", "es2017.string"],
     "declaration": true,
+    "main": "lib/s3bucket-with-cloudfront.js",
+    "types": "lib/s3bucket-with-cloudfront.d.ts",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -19,6 +21,5 @@
     "strictPropertyInitialization":false,
     "outDir": "./lib"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "**/__tests__/*", "lib"]
 }
