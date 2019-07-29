@@ -79,10 +79,10 @@ class S3BucketWithCloudFront(core.Construct):
             price_class=PriceClass.PRICE_CLASS_ALL,
         )
 
-        web_application_bucket.grant_read({
-            'grant_principal': ArnPrincipal(
+        web_application_bucket.grant_read(
+            identity=ArnPrincipal(
                 "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity %s" % cf_origin_access_identity.ref)
-        })
+        )
 
         core.CfnOutput(
             self,
