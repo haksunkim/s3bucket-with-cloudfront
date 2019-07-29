@@ -1,4 +1,4 @@
-import {Construct, Duration, RemovalPolicy} from '@aws-cdk/core';
+import {Construct, Duration, RemovalPolicy, Tag, TagManager} from '@aws-cdk/core';
 import {Bucket} from "@aws-cdk/aws-s3";
 import {
     CfnCloudFrontOriginAccessIdentity, CfnDistribution,
@@ -63,10 +63,6 @@ export class S3BucketWithCloudFront extends Construct {
             viewerProtocolPolicy: ViewerProtocolPolicy.ALLOW_ALL,
             errorConfigurations: props.errorConfigurations,
             priceClass: PriceClass.PRICE_CLASS_ALL
-        });
-
-        webApplicationBucket.grantRead({
-            grantPrincipal: new ArnPrincipal('arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ' + cfOriginAccessIdentity.ref)
         });
     }
 }
