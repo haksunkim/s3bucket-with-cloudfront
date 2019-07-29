@@ -63,18 +63,18 @@ class S3BucketWithCloudFront(core.Construct):
             ],
             viewer_protocol_policy=ViewerProtocolPolicy.ALLOW_ALL,
             error_configurations=kwargs.get('error_configurations', [
-                {
-                    "error_code": 404,
-                    "response_code": 200,
-                    "error_caching_min_ttl": 300,
-                    "response_page_path": "/index.html"
-                },
-                {
-                    "error_code": 403,
-                    "response_code": 200,
-                    "error_caching_min_ttl": 300,
-                    "response_page_path": "/index.html"
-                }
+                CfnDistribution.CustomErrorResponseProperty(
+                    error_code=404,
+                    response_code=200,
+                    error_caching_min_ttl=300,
+                    response_page_path='/index.html',
+                ),
+                CfnDistribution.CustomErrorResponseProperty(
+                    error_code=403,
+                    response_code=200,
+                    error_caching_min_ttl=300,
+                    response_page_path='/index.html',
+                ),
             ]),
             price_class=PriceClass.PRICE_CLASS_ALL,
         )
