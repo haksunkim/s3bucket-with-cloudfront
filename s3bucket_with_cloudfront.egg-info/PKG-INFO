@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: s3bucket-with-cloudfront
+Version: 0.0.1
+Summary: AWS CDK Construct for S3Bucket with CloudFront
+Home-page: https://github.com/haksunkim/s3bucket-with-cloudfront
+Author: Haksun Kim
+Author-email: itpro@haksunkim.com
+License: UNKNOWN
+Description: # s3bucket-with-cloudfront
+        CDK Construct which setup S3 bucket with CloudFront to serve webpage to public
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

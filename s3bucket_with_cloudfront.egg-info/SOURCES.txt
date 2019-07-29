@@ -1,0 +1,9 @@
+README.md
+setup.py
+construct/__init__.py
+construct/predefined.py
+s3bucket_with_cloudfront.egg-info/PKG-INFO
+s3bucket_with_cloudfront.egg-info/SOURCES.txt
+s3bucket_with_cloudfront.egg-info/dependency_links.txt
+s3bucket_with_cloudfront.egg-info/requires.txt
+s3bucket_with_cloudfront.egg-info/top_level.txt
