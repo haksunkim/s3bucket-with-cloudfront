@@ -1,1 +1,1 @@
-from construct import S3BucketWithCloudFront
+from construct.predefined import S3BucketWithCloudFront
